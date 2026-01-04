@@ -223,6 +223,7 @@ h6 {
   transition: all 0.3s;
   opacity: 0;
   visibility: hidden;
+  z-index: 997;
 }
 
 .overlay-nav.active .overlay-nav-close {
@@ -3056,7 +3057,7 @@ time {
 }
 
 .contact .contact-info-area {
-  padding-left: 40px;
+  padding-right: 10px;
 }
 
 .contact .contact-info-area .info-header {
@@ -3089,7 +3090,7 @@ time {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 24px;
+  padding: 12px 18px;
   background: var(--surface-color);
   border-radius: 20px;
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 92%);
@@ -3133,7 +3134,7 @@ time {
 }
 
 .contact .contact-info-area .method-card .card-content h5 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 4px;
   color: var(--heading-color);
@@ -3158,6 +3159,9 @@ time {
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 96%), color-mix(in srgb, var(--accent-color), transparent 92%));
   border-radius: 20px;
   margin-bottom: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact .contact-info-area .additional-info .info-stats .stat-item {
@@ -3262,6 +3266,276 @@ time {
     text-align: center;
   }
 }
+
+.custom-file-upload {
+  position: relative;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.upload-box {
+  border-radius: 16px;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  background-color: color-mix(in srgb, var(--surface-color), var(--background-color) 30%);
+  color: var(--default-color);
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.upload-box i {
+  font-size: 32px;
+  color: #6c757d;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.upload-box span {
+  display: block;
+  font-size: 15px;
+  color: #344054;
+}
+
+.upload-box small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.upload-box:hover {
+  border-color: #0d6efd;
+  background: #f5f8ff;
+}
+
+.upload-box:hover i {
+  color: #0d6efd;
+}
+/*--------------------------------------------------------------
+# Featured Posts Section
+--------------------------------------------------------------*/
+.featured-posts {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
+}
+
+.featured-posts .blog-posts-slider .swiper-wrapper {
+  height: auto !important;
+}
+
+.featured-posts .blog-posts-slider .swiper-pagination {
+  position: relative;
+  margin-top: 50px;
+}
+
+.featured-posts .blog-posts-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: color-mix(in srgb, var(--default-color), transparent 70%);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.featured-posts .blog-posts-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--accent-color);
+  transform: scale(1.2);
+}
+
+.featured-posts .blog-card {
+  background: var(--surface-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px color-mix(in srgb, var(--default-color), transparent 90%);
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-posts .blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.featured-posts .blog-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.featured-posts .blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.featured-posts .blog-image .category-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.featured-posts .blog-image:hover img {
+  transform: scale(1.05);
+}
+
+.featured-posts .blog-content {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .featured-posts .blog-content {
+    padding: 25px;
+  }
+}
+
+.featured-posts .author-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.featured-posts .author-info .author-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 3px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.featured-posts .author-info .author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-posts .author-info .author-details .author-name {
+  font-weight: 600;
+  color: var(--heading-color);
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.featured-posts .author-info .author-details .publish-date {
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.featured-posts h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+}
+
+@media (max-width: 768px) {
+  .featured-posts h3 {
+    font-size: 18px;
+  }
+}
+
+.featured-posts h3 a {
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+
+.featured-posts h3 a:hover {
+  color: var(--accent-color);
+}
+
+.featured-posts p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+.featured-posts .blog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+@media (max-width: 576px) {
+  .featured-posts .blog-footer {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
+
+.featured-posts .reading-time {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.featured-posts .reading-time i {
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.featured-posts .btn-read-more {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #000 10%));
+  color: var(--contrast-color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.featured-posts .btn-read-more span {
+  margin-right: 8px;
+}
+
+.featured-posts .btn-read-more i {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.featured-posts .btn-read-more:hover {
+  transform: translateX(5px);
+  background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color), #000 10%), var(--accent-color));
+  color: var(--contrast-color);
+}
+
+.featured-posts .btn-read-more:hover i {
+  transform: translateX(3px);
+}
+
+@media (max-width: 576px) {
+  .featured-posts .btn-read-more {
+    align-self: flex-end;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
